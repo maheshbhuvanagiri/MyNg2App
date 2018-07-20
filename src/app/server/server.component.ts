@@ -6,5 +6,22 @@ import { Component } from '@angular/core';
 })
 
 export class ServerComponent {
-   name = "server"
+    name = "server";
+    status: string;
+    clientCount: number;
+    clients: { id: number, name: string }[];
+
+    showClientStatus(val) {
+        this.status = 'server: ' + val.name + '(online)';
+    }
+
+    generateClients() {
+        this.clients = [];
+        for (let i = 0; i < this.clientCount; i++) {
+            this.clients.push({
+                id: i,
+                name: 'client' + i
+            });
+        }
+    }
 }

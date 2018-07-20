@@ -1,3 +1,10 @@
 <h2>server component</h2>
-<app-client></app-client>
-<app-client></app-client>
+
+<div>
+    <span>No of clients</span> 
+    <input type="number" [(ngModel)]='clientCount'> <button (click)="generateClients()">Click me</button>
+</div>
+<app-client [clientName]='client' *ngFor="let client of clients" (displayClinet)='showClientStatus($event)' >
+    
+</app-client>
+<div>{{status}}</div>

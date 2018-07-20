@@ -15,6 +15,7 @@ export class WarningAlertComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    
   }
 
 }
